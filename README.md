@@ -1,0 +1,38 @@
+Run the test and see. Specifying an enum and the using with_options
+anywhere in the same class raises an argument error
+
+irb(main):001:0> EnumWithOption.create
+ArgumentError: wrong number of arguments (given 1, expected 0)
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/enum.rb:157:in `block (2 levels) in enum'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/option_merger.rb:22:in `method_missing'
+	from /Users/JoeWoodward/Desktop/enum_with_options/app/models/enum_with_option.rb:5:in `block in <class:EnumWithOption>'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/core_ext/object/with_options.rb:67:in `instance_eval'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/core_ext/object/with_options.rb:67:in `with_options'
+	from /Users/JoeWoodward/Desktop/enum_with_options/app/models/enum_with_option.rb:4:in `<class:EnumWithOption>'
+	from /Users/JoeWoodward/Desktop/enum_with_options/app/models/enum_with_option.rb:1:in `<top (required)>'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:477:in `load'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:477:in `block in load_file'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:662:in `new_constants_in'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:476:in `load_file'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:375:in `block in require_or_load'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/concurrency/share_lock.rb:150:in `exclusive'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies/interlock.rb:11:in `loading'
+... 6 levels...
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+	from /Users/JoeWoodward/Desktop/enum_with_options/bin/rails:9:in `<top (required)>'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:287:in `load'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:287:in `block in load'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:287:in `load'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/JoeWoodward/.rbenv/versions/2.3.3/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
